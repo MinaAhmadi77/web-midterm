@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <title>Web-midterm</title>
+     <link rel="stylesheet" href="css/style.css">
+     <script src="js/myjs.js"></script>
+</header>
+<body>
+
+    <div class="MainBox">
+
+        
+        <div id="main">
+
+
+
+            <div><h1>Mr. or Ms.?</h1>
+            
+            <div id="rows">
+                <div class="rowitems">
+                    <label>Name: </label>
+                    <input id="Names" type="text" maxlength="255" onkeypress="return /[a-z ]/i.test(event.key)">
+                </div>
+                <div class="rowitems" id="gender">
+                    <input type="radio" id="Male" name="sex" value="Male" onclick="genderresult(this.value)">
+                    <label for="Male">Male</label><br>
+                </div>               
+                <div class="rowitems">
+                    <input type="radio" id="Femaile" name="sex" value="Femaile" onclick="genderresult(this.value)">
+                    <label for="Femaile">Femaile</label><br>
+                </div>
+                
+
+              
+                <input class="Buttons" type="submit" value="Submit"onclick="submit()"> 
+                
+                <input class="Buttons" type="submit" value="Save" onclick="checkCookie()"> 
+                
+                
+            </div>
+            </div>
+            <div>
+                 <h1>Perediction</h1>
+                 <div class="rowitems">
+                    <label id="genders"></label>
+                    
+                 </div>
+                 <div class="rowitems">
+                 <label id="probability"></label>
+                 </div>
+		
+                 <div class="Answerreq">
+		<h1>Saved Answer</h1>
+                  <div class="rowitems">
+                    <label id="gendersLoad"></label>
+                    
+                 </div>
+                 <div class="rowitems">
+                 <label id="probabilityLoad"></label>
+                 </div>
+                     <label id="Pagestatus"></label>
+                     </br>
+                     <input class="clearbtn" type="submit" value="Clear" onclick="deleteAllCookies()"> 
+                 </div>
+               <!-- ذخیره جنسیت در این ورودی نگهداری می شود  -->
+                 <input type="hidden" id="result">
+           </div>  
+            
+
+        
+</body>
+</html>
