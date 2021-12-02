@@ -1,0 +1,100 @@
+body, html {
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+    border: none;
+}
+* {
+  font-size: 100%;
+  font-family: tahoma;
+}
+body {
+  background-image: url("../img/Background6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-family: 'Tahoma', sans-serif;
+
+
+
+}
+.MainBox {
+  flex-basis: fit-content;
+  border-radius: 30px;
+  width: 50%;
+  height: 80%;
+  background-color:rgb(230, 230, 255);
+  box-shadow: 0 0 50px rgba(20, 78, 231, 0.4);
+  opacity: 0.7;
+  position: absolute;
+  border: 1px solid black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#main {
+
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
+  flex-basis: fit-content;
+  display: flex;
+}
+#main div {
+  flex: 1;
+}
+
+#rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: fit-content;
+  align-items: baseline;
+}
+
+#rows div {
+  flex: 0;
+}
+
+.rowitems {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.Buttons {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100px;
+  background-color:rgb(255, 204, 204);
+  transition-duration: 0.5s;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 18px;
+}
+.clearbtn{
+  margin-top: 10px;
+  margin-left: 0px;
+ 
+  width: 100px;
+  background-color:rgb(255, 204, 204);
+  transition-duration: 0.5s;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 18px;
+
+}
+.Answerreq {
+  border: 1px solid black;
+  border-style: dashed;
+  width: 50%;
+}
