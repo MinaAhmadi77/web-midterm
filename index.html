@@ -1,77 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-    <title>Web-midterm</title>
-     <link rel="stylesheet" href="css/style.css">
-     <script src="js/myjs.js"></script>
-</header>
-<body>
+   <header>
+      <title>Web-midterm</title>     
+      <link rel="stylesheet" href="css/style.css">  <!-- دراین قسمت به فایل jsوcss وصل میشویم  -->
+      <script src="js/myjs.js"></script>
+   </header>
+   <body>
 
-    <div class="MainBox">
+      <div class="MainBox">  <!-- use some div for layers structure -->
+         <div id="main">
+            <div>       
+               <div id="columns">           <!-- مستطیل وسط از دو ستون تشکیل شده است این قسمت مربوط به ستون سمت چپ است   -->
+                   <h1>Mr. or Ms.?</h1>
 
-        
-        <div id="main">
+                   <div class="rowitems">   <!--  این قسمت محل وارد کردن اسم برای پیش بینی است    -->
+                      <label>Name: </label>
+                      <input id="Names" type="text" maxlength="255" onkeypress="return /[a-z ]/i.test(event.key)">  <!--  اسم بایدحتما از حروف تشکیل شده باشد ومحدودیت 255حرف را داریم   -->
+                   </div>
 
-
-
-            <div>
+                   <div class="rowitems" id="gender">                                      <!-- ازدوتا رادیو باتن برای انتخاب زن یا مرد بودن اسم استفاده شده است    -->
+                      <input type="radio" id="Male" name="sex" value="Male" onclick="genderresult(this.value)">     <!-- call genderresult and send value    -->   
+                      <label for="Male">Male</label><br>
+                   </div>   
             
-            <div id="columns">
-		<h1>Mr. or Ms.?</h1>
-                <div class="rowitems">
-                    <label>Name: </label>
-                    <input id="Names" type="text" maxlength="255" onkeypress="return /[a-z ]/i.test(event.key)">
-                </div>
-                <div class="rowitems" id="gender">
-                    <input type="radio" id="Male" name="sex" value="Male" onclick="genderresult(this.value)">
-                    <label for="Male">Male</label><br>
-                </div>               
-                <div class="rowitems">
-                    <input type="radio" id="Femaile" name="sex" value="Femaile" onclick="genderresult(this.value)">
-                    <label for="Femaile">Femaile</label><br>
-                </div>
-                
+                   <div class="rowitems">
+                      <input type="radio" id="Femaile" name="sex" value="Femaile" onclick="genderresult(this.value)">
+                      <label for="Femaile">Femaile</label><br>
+                   </div>
 
-              
-                <input class="Buttons" type="submit" value="Submit"onclick="submit()"> 
-                
-                <input class="Buttons" type="submit" value="Save" onclick="checkCookie()"> 
+                   <input class="Buttons" type="submit" value="Submit"onclick="submit()">                 <!--دکمه های سابمیت و سیو   -->
+                   <input class="Buttons" type="submit" value="Save" onclick="checkCookie()">               <!-- بازدن هر دکمه توابع مربوطه صدازده میشوند    -->
                 
                 
-            </div>
+               </div>
             </div>
             <div>
-		<div id="columns">
+               <div id="columns">       <!-- ستون سمت چپ مستطیل وسط    -->
 		
-                 <h1>Perediction</h1>
-                 <div class="rowitems">
-		   
-                    <label id="genders"></label>
-                    
-                 </div>
-                 <div class="rowitems">
-                 <label id="probability"></label>
-                 </div>
-		
-                 <div class="Answerreq">
-		<h1>Saved Answer</h1>
-                  <div class="rowitems">
-                    <label id="gendersLoad"></label>
-                    
-                 </div>
-                 <div class="rowitems">
-                 <label id="probabilityLoad"></label>
-                 </div>
-                     <label id="Pagestatus"></label>
+                  <h1>Perediction</h1>
+
+                  <div class="rowitems">	   
+                     <label id="genders"></label>      <!-- زن یا مرد بود پس از پیش بینی در این قسمت نوشته میشود    -->             
+                  </div>	
+			  
+                  <div class="rowitems">           
+                     <label id="probability"></label>   <!-- عدد احتمال دراینجا نوشته میشود   -->
+                  </div>	
+	
+                  <div class="Answerreq">   <!--  اطلاعات سیو شده در کوکی دراینجا نمایش داده میشود    -->
+		     <h1>Saved Answer</h1>
+
+                     <div class="rowitems">          
+                        <label id="gendersLoad"></label>         <!--  جنسیت سیو شده دراینجا نمایش داده میشود ولی اگر دروضعیت نوشته شود که از کوکی لود شده ولی هیچ چیزی نمایش داده نشود یعنی در کوکی جنسیتی برای آن اسم سیو نشده ویا قبلا پاک شده   -->    
+                     </div>
+
+                     <label id="Pagestatus"></label>             <!-- تمام وضعیت ها از جمله پاک کردن اسم ذخیره شده ازکوکی ، لود شدن جنسیت سیو شده از کوکی ، عدم اتصال به سرور و یا پیدانشدن اسم در سایت دراین قسمت نمایش داده میشود    -->
                      </br>
-                     <input class="clearbtn" type="submit" value="Clear" onclick="deleteAllCookies()"> 
-                 </div>
-               <!-- ذخیره جنسیت در این ورودی نگهداری می شود  -->
-                 <input type="hidden" id="result">
-           </div>  
+                     <input class="clearbtn" type="submit" value="Clear" onclick="deleteAllCookies()"> <!-- دکمه پاک کردن جنسیت سیو شده برای آن اسم از کوکی و فراخوانی تابع مربوطه   -->
+                  </div>
+                      <!-- ذخیره جنسیت در این ورودی نگهداری می شود و به صورت پنهان است  -->
+                  <input type="hidden" id="result">
+               </div>  
             </div>
- </div>
- </div>
+         </div>
+      </div>
         
-</body>
+   </body>
 </html>

@@ -58,17 +58,17 @@ function checkCookie() {
 function submit() {
   var xhr = new XMLHttpRequest()
   xhr.onreadystatechange = function () {
-    // اگر ارتباط وصل بود و مشکی سمت سرور نبود مقادیر بازگشتی چاپ می شود
+
     if (xhr.readyState === XMLHttpRequest.DONE) {
-     var status = xhr.status;
-    if ((status >= 200 && status < 400)) {
+     var status = xhr.status;                    // اگر ارتباط وصل بود و مشکی سمت سرور نبود مقادیر بازگشتی چاپ می شود
+    if ((status >= 200 && status < 400)) {   //چون کدهای وضعیت بیشتراز400یاکمتراز 200 نشان دهنده ریکوئست بد ویا کلا وجود مشکل است
       const obj = JSON.parse(xhr.response)
-      //اگر نام ارسالی دیتایی نداشت این ارور ثثبت می شود
+
       if (obj.gender == null) {
         document.getElementById("genders").innerHTML = ""
         document.getElementById("probability").innerHTML = ""
          document.getElementById("gendersLoad").innerHTML = ""
-        document.getElementById("Pagestatus").innerHTML = "Error: Name Not Found"
+        document.getElementById("Pagestatus").innerHTML = "Error: Name Not Found"  //اگر نام ارسالی دیتایی نداشت ودرسایت نبود، این ارور ثبت می شود
       } else {
         document.getElementById("genders").innerHTML = obj.gender
         document.getElementById("probability").innerHTML = obj.probability
