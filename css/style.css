@@ -1,100 +1,84 @@
-body, html {
-    min-height: 100vh;
+
+body {
+  background-image: url("../img/Background6.jpg");
+    min-height: 100vh;       /*برای تصویر پس زمینه طول و عرض مینیموم و ماکسیموم تعیین میکنیم تا با کوچک کردن وبا تغییر اندازه صفحه تصویر جابجا نشود ویا تکرارنشود*/
     max-height: 100vh;
     min-width: 100vw;
     max-width: 100vw;
     overflow: hidden;
-    border: none;
-}
-* {
-  font-size: 100%;
-  font-family: tahoma;
-}
-body {
-  background-image: url("../img/Background6.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover; /*این قسمت برای این میباشد که عکس کاملا پس زمینه را پوشش دهد*/
+    background-repeat: no-repeat; /*تکرارنشود*/
     background-position: center;
     align-items: center;
     align-self: center;
     justify-content: center;
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Tahoma', serif;/*فونت تمام نوشته ها*/
+    display:flex;       /*برای فلکس بودن اجزای بادی که شامل همان مستطیل وسط میشود*/
+    justify-content: center; /*وبگاه را دقیقا در وسط صفحه قرارمیدهد*/
 
 
 
 }
 .MainBox {
-  flex-basis: fit-content;
-  border-radius: 30px;
-  width: 50%;
-  height: 80%;
-  background-color:rgb(230, 230, 255);
-  box-shadow: 0 0 50px rgba(20, 78, 231, 0.4);
-  opacity: 0.7;
+  flex-basis: fit-content; /*برای فلکس شدن تمام قسمت های باکس به صورت یکسان*/ 
+  border-radius: 40px; /*برای نیم دایره شدن گوشه های باکس وسط*/ 
+  background-color:rgb(230, 230, 255);/*رنگ*/
+  box-shadow: 0 0 50px rgba(20, 78, 231, 0.4);/*سایه اطراف باکس وسط*/
+  opacity: 0.7; /*برای شفاف شدن رنگ باکس*/
   position: absolute;
-  border: 1px solid black;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  content: "";
-  clear: both;
-  display: table;
+  border: 1px solid black;/*بوردر مشکی دور باکس وسط*/
+  display: flex; /*برای فلکس بودن اجزای main*/
+  justify-content: center;/*هردوستون در وسط قرارمیگیرند*/
+
+}
+
+h1 {
+  font-size: 25px;
 }
 
 #main {
-
-  border-radius: 30px;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  margin: 20px;
-  flex-basis: fit-content;
-  display: flex;
+  display: flex; /*برای فلکس بودن ستون ها ودر یک ردیف بودن انها*/ 
+  justify-content: center;
 }
 #main div {
-  flex: 1;
+  flex: 1; /*فاصله بین ستون ها و حاشیه به انذازه یک باشد  ومتناسب باشد*/ 
 }
 
-#rows {
-  width: 100%;
+#columns {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;/* برای اینکه اجزای هر ستون دقیقا زیر هم قرار بگیرد در یک ستون*/ 
   flex-basis: fit-content;
-  align-items: baseline;
+  margin:35px;/*برای فاصله  گرفتن کادر بیرونی هز ستون از حاشیه*/
+
 }
 
-#rows div {
-  flex: 0;
-}
-
-.rowitems {
+.rowitems { /*برای فاصله گرفتن کادر درونی هر کدام از اجزای هرستون از یکدیگر*/
   padding-top: 10px;
   padding-bottom: 10px;
+  
 }
 .Buttons {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 100px;
-  background-color:rgb(255, 204, 204);
-  transition-duration: 0.5s;
-  text-align: center;
-  border-radius: 15px;
-  font-size: 18px;
+  margin-top: 10px;/*برای فاصله گرفتن دکمه ها از هم*/
+  width: 100px;/*پهنای هردکمه*/
+  background-color:rgb(255, 204, 204);/*رنگ*/
+  text-align: center;/*برای وسط بودن نوشته داخل دکمه ها*/
+  border-radius: 15px;/*برای نیم دایره شدن گوشه دکمه ها*/
+  font-size: 15px;/*سایر فونت نوشته داخل دکمه*/
 }
-.clearbtn{
+.clearbtn{  /*دکمه پاک کردن اسم از کوکی است که مانند بقیه دکمه هاست فقط رنگش فرق میکند*/
   margin-top: 10px;
-  margin-left: 0px;
- 
   width: 100px;
-  background-color:rgb(255, 204, 204);
+  background-color:rgb(255, 230, 230);
   transition-duration: 0.5s;
   text-align: center;
   border-radius: 15px;
-  font-size: 18px;
+  font-size: 15px;
 
 }
-.Answerreq {
-  border: 1px solid black;
+.Answerreq { /*بخش نمایش اطلاعات سیو شده*/
+  border: 1px solid black; /*یک بوردر به صورت خط چین دارد بارنگ مشکی*/
   border-style: dashed;
-  width: 50%;
+  padding-bottom: 10px;/*اجزای داخلی این باکس با خط چین فاصله دار میشوند از چپ و پایین*/
+  padding-left: 10px;
+  width: 70%;/*پهنای باکس*/
 }

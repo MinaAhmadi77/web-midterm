@@ -14,9 +14,10 @@
 
 
 
-            <div><h1>Mr. or Ms.?</h1>
+            <div>
             
-            <div id="rows">
+            <div id="columns">
+		<h1>Mr. or Ms.?</h1>
                 <div class="rowitems">
                     <label>Name: </label>
                     <input id="Names" type="text" maxlength="255" onkeypress="return /[a-z ]/i.test(event.key)">
@@ -40,8 +41,11 @@
             </div>
             </div>
             <div>
+		<div id="columns">
+		
                  <h1>Perediction</h1>
                  <div class="rowitems">
+		   
                     <label id="genders"></label>
                     
                  </div>
@@ -65,8 +69,9 @@
                <!-- ذخیره جنسیت در این ورودی نگهداری می شود  -->
                  <input type="hidden" id="result">
            </div>  
-            
-
+            </div>
+ </div>
+ </div>
         
 </body>
 </html>
