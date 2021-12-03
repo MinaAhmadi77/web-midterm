@@ -4,7 +4,7 @@ function showcookie() {
   document.getElementById("gendersLoad").innerHTML = getCookie(
     document.getElementById("Names").value
   )
-  document.getElementById("probabilityLoad").innerHTML = ""
+
   document.getElementById("Pagestatus").innerHTML = "Load from Cookie"
 }
 //اضافه کردن نام  و جنسیت در کوکی
@@ -45,7 +45,6 @@ function deleteAllCookies() {
 
   //خالی کردن مفادیر نمایش داده شده در قسمت پیش بینی از کوکی
   document.getElementById("gendersLoad").innerHTML = ""
-  document.getElementById("probabilityLoad").innerHTML = ""
   document.getElementById("Pagestatus").innerHTML = "Cookie clear"
 }
 //ذخیره کوکی ها
