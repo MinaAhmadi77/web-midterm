@@ -1,4 +1,3 @@
-
 body {
   background-image: url("../img/Background6.jpg");
     min-height: 100vh;       /*برای تصویر پس زمینه طول و عرض مینیموم و ماکسیموم تعیین میکنیم تا با کوچک کردن وبا تغییر اندازه صفحه تصویر جابجا نشود ویا تکرارنشود*/
@@ -8,13 +7,11 @@ body {
     overflow: hidden;
     background-size: cover; /*این قسمت برای این میباشد که عکس کاملا پس زمینه را پوشش دهد*/
     background-repeat: no-repeat; /*تکرارنشود*/
-    background-position: center;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
+    background-position: center;/*پس زمینه وسط قرارمیگیرد*/
+    align-items: center;   /*وبگاه را دقیقا در وسط صفحه قرارمیدهدازنظرعمودی*/
     font-family: 'Tahoma', serif;/*فونت تمام نوشته ها*/
     display:flex;       /*برای فلکس بودن اجزای بادی که شامل همان مستطیل وسط میشود*/
-    justify-content: center; /*وبگاه را دقیقا در وسط صفحه قرارمیدهد*/
+    justify-content: center; /*وبگاه را دقیقا در وسط صفحه قرارمیدهدازنظرافقی*/
 
 
 
